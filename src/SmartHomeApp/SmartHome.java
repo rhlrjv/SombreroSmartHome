@@ -10,7 +10,7 @@ public class SmartHome {
     }
 
     public void runOnce() {
-        if (s.isOn()){
+        if (s.isOn()) {
             switchable.turnOn();
         } else {
             switchable.turnOff();

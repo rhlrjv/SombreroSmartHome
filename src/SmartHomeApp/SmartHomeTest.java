@@ -2,20 +2,19 @@ package SmartHomeApp;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class SmartHomeTest {
     @Test
     public void whenSwitchIsOn_ThenSwitchableShouldBeTurnedOn() {
-         Switch s = new AlwaysOnSwitch();
-         SwitchableSpy switchable = new SwitchableSpy();
+        Switch s = new AlwaysOnSwitch();
+        SwitchableSpy switchable = new SwitchableSpy();
 
-         new SmartHome(s, switchable).runOnce();
+        new SmartHome(s, switchable).runOnce();
 
-         assertTrue(switchable.turnOnWasCalled());
-         assertFalse(switchable.turnOffWasCalled());
+        assertTrue(switchable.turnOnWasCalled());
+        assertFalse(switchable.turnOffWasCalled());
     }
 
     @Test
